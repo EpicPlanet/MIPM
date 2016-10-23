@@ -2,4 +2,9 @@ plugins: []
 repositories:
 - http://central.maven.org/maven2/
 - http://peulia.iptime.org:8081/repository/maven-public/
-- https://jitpack.io
+- https://jitpack.io/
+- https://hub.spigotmc.org/nexus/content/repositories/snapshots/
+- http://nexus.hc.to/content/repositories/pub_releases/
+- http://repo.ess3.net/content/groups/essentials/
+- http://repo.dmulloy2.net/content/groups/public/
+- http://repo.onarandombox.com/content/groups/public

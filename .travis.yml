@@ -4,18 +4,18 @@ jdk:
 - oraclejdk8
 
 deploy:
-- provider: script
-  script: mvn site deploy --settings travis/settings.xml
-  skip_cleanup: true
-  on:
-    repo: EpicPlanet/MIPM
-    tags: true
-- provider: releases
-  api_key:
-    secure: phcKLt+Z9hSXYxqxice+Sj91IE0z7fWk+n2Zl2/P6zHaSdyNCjNwyTVvmz/h5us6S6Yah3sftfkq0aW+nit7FqHXWKXsF16795tg85QLuM4u5LZuy4U6oj/4SEyMpuAO7sbGxBxVBJzOfOE2l1agl5382kvlNaLpZieYF8FZO/QOXZgp2aebHgp0u8TWtGB+KpV3qsLoJ2/G06F2f4V2iCEgoLH+bIy/fEXoUQq4fjSRNsKuUXGriZe79ZA+TTFOWnyAajlvBItvr4r/4Lzi0r+F+JuMyFbjSRXtjR6tbDAsl4nqIkRFjPF0YL90nBKu9XPoGaUK4s70N2el5E0wmiCdQDt5vucU/4fxnVxbxsSIxph/gNIyRoFzWpiSyhSiVSAkEg3qr8blWjCQpF3K24KrX2WEJNvPI7FfEHrXLdyWPk7iRZIbWuAlDaQEOHvuPwv94xy111v7p1JriBjVD2qS9gTpiJ64pkNRIv84X+DCAD2wbV+1fn+sDCkT+pskGYXjbdDYMVuqJf17NUnWWrHMj2ohpoLX//odq2QquTXsmt5G3GNt9h6G38C8E/Xf3hDZPfrC444S4M2IgO0GJq3NO8+XhdBeJrTEHYCcrcDa81Tb/m5DsSJkMJwjpEeGv2ZpW2wMoJrO7aQAQRM2N33MDw5ZrhGSyNtx0tKaq3o=
-  file_glob: true
-  file: mipm-*.jar
-  skip_cleanup: true
-  on:
-    repo: EpicPlanet/MIPM
-    tags: true
+  - provider: script
+    script: mvn site deploy --settings travis/settings.xml
+    skip_cleanup: true
+    on:
+      repo: EpicPlanet/MIPM
+      tags: true
+  - provider: releases
+    api_key:
+      secure: phcKLt+Z9hSXYxqxice+Sj91IE0z7fWk+n2Zl2/P6zHaSdyNCjNwyTVvmz/h5us6S6Yah3sftfkq0aW+nit7FqHXWKXsF16795tg85QLuM4u5LZuy4U6oj/4SEyMpuAO7sbGxBxVBJzOfOE2l1agl5382kvlNaLpZieYF8FZO/QOXZgp2aebHgp0u8TWtGB+KpV3qsLoJ2/G06F2f4V2iCEgoLH+bIy/fEXoUQq4fjSRNsKuUXGriZe79ZA+TTFOWnyAajlvBItvr4r/4Lzi0r+F+JuMyFbjSRXtjR6tbDAsl4nqIkRFjPF0YL90nBKu9XPoGaUK4s70N2el5E0wmiCdQDt5vucU/4fxnVxbxsSIxph/gNIyRoFzWpiSyhSiVSAkEg3qr8blWjCQpF3K24KrX2WEJNvPI7FfEHrXLdyWPk7iRZIbWuAlDaQEOHvuPwv94xy111v7p1JriBjVD2qS9gTpiJ64pkNRIv84X+DCAD2wbV+1fn+sDCkT+pskGYXjbdDYMVuqJf17NUnWWrHMj2ohpoLX//odq2QquTXsmt5G3GNt9h6G38C8E/Xf3hDZPfrC444S4M2IgO0GJq3NO8+XhdBeJrTEHYCcrcDa81Tb/m5DsSJkMJwjpEeGv2ZpW2wMoJrO7aQAQRM2N33MDw5ZrhGSyNtx0tKaq3o=
+    file_glob: true
+    file: mipm-*.jar
+    skip_cleanup: true
+    on:
+      repo: EpicPlanet/MIPM
+      tags: true
