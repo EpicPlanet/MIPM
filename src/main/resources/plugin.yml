@@ -1,0 +1,17 @@
+name: ${project.name}
+version: ${project.version}
+description: ${project.description}
+author: ${project.organization.name}
+website: ${project.url}
+main: ${project.groupId}.mipm.MIPM
+
+commands:
+  mipm:
+    description: MIPM main command.
+    permission: mipm
+    usage: /mipm <subcommand> [args]
+
+permissions:
+  mipm:
+    description: MIPM main permission.
+    default: op

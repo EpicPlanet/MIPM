@@ -1,0 +1,5 @@
+plugins: []
+repositories:
+- http://central.maven.org/maven2/
+- http://peulia.iptime.org:8081/repository/maven-public/
+- https://jitpack.io
