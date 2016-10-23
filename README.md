@@ -1,4 +1,4 @@
-# MIPM
+# MIPM [![Build Status](https://travis-ci.org/EpicPlanet/MIPM.svg?branch=master)](https://travis-ci.org/EpicPlanet/MIPM)
 MavenIzed Plugin Manager
 
 ## Installation
