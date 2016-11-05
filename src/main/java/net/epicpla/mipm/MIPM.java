@@ -47,8 +47,13 @@ public class MIPM extends JavaPlugin {
 
     public Map<MISimplePluginInfo, String> pluginsToBeLoadedOnStartup;
 
+    static {
+        System.out.println("static block");
+    }
+
     @Override
     public void onLoad() {
+        System.out.println("onLoad block");
         instance = this;
 
         MavenUtil.getInstance().repositories.addAll(getConfig().getStringList("repositories").stream().map(repo -> new RemoteRepository.Builder(null, null, repo).build()).collect(Collectors.toList()));
@@ -58,6 +63,7 @@ public class MIPM extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        System.out.println("onEnable block");
         getCommand("mipm").setExecutor(new MIPMCommandHandler());
     }
 
@@ -86,7 +92,7 @@ public class MIPM extends JavaPlugin {
         Field f;
 
         try {
-            f = SimplePluginManager.class.getField("fileAssociations");
+            f = SimplePluginManager.class.getDeclaredField("fileAssociations");
         } catch (NoSuchFieldException e) {
             getLogger().severe("Field 'fileAssociations' doesn't exist in the PluginManager. MIPM could not load plugins.");
             return null;
@@ -101,7 +107,7 @@ public class MIPM extends JavaPlugin {
         }
 
         try {
-            f = SimplePluginManager.class.getField("lookupNames");
+            f = SimplePluginManager.class.getDeclaredField("lookupNames");
         } catch (NoSuchFieldException e) {
             getLogger().severe("Field 'lookupNames' doesn't exist in the PluginManager. MIPM could not load plugins.");
             return null;
